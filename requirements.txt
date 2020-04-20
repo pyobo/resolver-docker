@@ -1,0 +1,10 @@
+obonet
+click
+tqdm
+pyyaml
+pandas
+requests
+protmapper
+flask
+flask-bootstrap
+flasgger
