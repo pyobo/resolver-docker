@@ -1,6 +1,15 @@
 # resolver-docker
 
-A docker image for the CURIE->Name resolver. To run, do this:
+A docker image for the CURIE->Name resolver. 
+
+Run with `docker`:
+
+```bash
+docker build --tag resolver:1.0 .
+docker run resolver:1.0
+````
+
+Run with `docker-compose`:
 
 ```bash
 docker-compose up --build
