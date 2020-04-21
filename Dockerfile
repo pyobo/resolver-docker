@@ -5,6 +5,7 @@ RUN mkdir /app
 COPY requirements.txt /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-RUN wget "https://zenodo.org/record/3756206/files/ooh_na_na.tsv.gz?download=1" -O /app/ooh_na_na.tsv.gz
+RUN wget "https://zenodo.org/record/3756206/files/ooh_na_na.tsv.gz" -O /app/ooh_na_na.tsv.gz
 RUN pip install pyobo
-ENTRYPOINT python -m pyobo.apps.resolver --data /app/ooh_na_na.tsv.gz --port 5006 --host "0.0.0.0"
+EXPOSE 5000
+ENTRYPOINT python -m pyobo.apps.resolver --data /app/ooh_na_na.tsv.gz --port 5000 --host "0.0.0.0"

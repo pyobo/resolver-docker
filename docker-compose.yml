@@ -4,6 +4,6 @@ services:
     build: .
     volumes:
       - .:/app
-    command: python -m pyobo.apps.resolver --data /app/ooh_na_na.tsv.gz --port 5006 --host "0.0.0.0"
+    command: python -m pyobo.apps.resolver --data /app/ooh_na_na.tsv.gz --port 5000 --host "0.0.0.0"
     ports:
-      - 5006:5006
+      - 5000:5000
