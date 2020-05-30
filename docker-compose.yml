@@ -4,6 +4,6 @@ services:
     build: .
     volumes:
       - .:/app
-    command: python -m pyobo.apps.resolver --data /app/ooh_na_na.tsv.gz --port 5000 --host "0.0.0.0"
+    command: python -m pyobo.apps.resolver --port 5170 --host "0.0.0.0" --gunicorn
     ports:
-      - 5000:5000
+      - 5170:5170
