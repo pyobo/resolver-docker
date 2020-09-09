@@ -1,12 +1,12 @@
-# Ooh Na Na PostgreSQL Container
+# Ooh Na Na Resolver Docker
 
-This repository has the Dockerfile and setup necessary to prepare
-a pre-loaded PostgreSQL container and push it back to dockerhub for
-reuse.
+This repository has the Dockerfile and docker-compose configuration
+to run the Ooh Na Na Resolver web application on top of the
+[Ooh Na Na PostgreSQL container](https://github.com/pyobo/oohnana-docker).
 
-You can run with:
+Run with:
 
 ```bash
 git clone https://github.com/pyobo/resolver-docker
-sh setup.sh
+docker-compose up --build
 ```
