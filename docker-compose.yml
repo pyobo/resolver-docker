@@ -1,9 +1,0 @@
-version: '3'
-services:
-  web:
-    build: .
-    volumes:
-      - .:/app
-    command: python -m pyobo.apps.resolver --port 5170 --host "0.0.0.0" --gunicorn
-    ports:
-      - 5170:5170
