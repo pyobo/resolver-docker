@@ -14,5 +14,3 @@ services:
 
   database:
     image: cthoyt/oohnana:1.0.0
-    ports:
-      - 5432:5432
