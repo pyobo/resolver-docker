@@ -2,10 +2,9 @@ version: '3'
 
 services:
   resolver:
-    build:
-      context: .
-      args:
-        PYOBO_SQLALCHEMY_URI: postgresql://postgres:pyobo@database:5432/postgres
+    build: .
+    environment:
+      PYOBO_SQLALCHEMY_URI: postgresql://postgres:pyobo@database:5432/postgres
     command: python -m pyobo.apps.resolver --port 80 --host "0.0.0.0" --sql --gunicorn
     ports:
       - 80:80
@@ -13,4 +12,4 @@ services:
       - database
 
   database:
-    image: cthoyt/oohnana:1.0.0
+    image: pyobo/oohnana:49a70322ff

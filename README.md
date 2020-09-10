@@ -7,6 +7,7 @@ to run the Ooh Na Na Resolver web application on top of the
 Run with:
 
 ```bash
-git clone https://github.com/pyobo/resolver-docker
-docker-compose up --build
+git clone https://github.com/pyobo/resolver-docker.git
+cd resolver-docker
+docker-compose up
 ```
